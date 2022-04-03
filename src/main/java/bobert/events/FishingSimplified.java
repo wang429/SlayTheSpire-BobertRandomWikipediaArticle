@@ -1,7 +1,6 @@
 package bobert.events;
 
 import bobert.ModHome;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
@@ -16,14 +15,16 @@ public class FishingSimplified extends AbstractImageEvent {
     public static final String ID = "FishingSimplified";
     private static final String BODY = "Try your luck and maybe catch a fish!";
 
-    private int obtainChance = 50;
-    private int cost = 120;
+    private final int fishChance = 50;
+    private final int bootChance = 25;
+    private final int cost = 120;
 
     public FishingSimplified() {
         super(ID, BODY, ModHome.makeImagePath("events/test.png"));
 
+        int total = fishChance + bootChance;
         this.imageEventText.setDialogOption(
-                String.format("[Go Fishing] #y%1$s #yGold - #g%2$s%%: #gObtain #ga #grelic", cost, obtainChance)
+                String.format("[Go Fishing] #y%1$s #yGold - #g%2$s%%: #gObtain #ga #grelic", cost, total)
         );
         this.imageEventText.setDialogOption("[Leave]");
     }
@@ -36,10 +37,15 @@ public class FishingSimplified extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.player.loseGold(cost);
-                        if (AbstractDungeon.miscRng.random(0, 99) < obtainChance) {
+                        int random = AbstractDungeon.miscRng.random(0, 30);
+                        if (random < fishChance) {
                             this.imageEventText.updateBodyText("Well, a fish bit!");
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, new CeramicFish());
-                        } else {
+                        }
+                        else if (random < bootChance) {
+                            this.imageEventText.updateBodyText("W");
+                        }
+                        else {
                             this.imageEventText.updateBodyText("Better luck next time.");
                         }
                         this.imageEventText.updateDialogOption(0, "[Leave]");
