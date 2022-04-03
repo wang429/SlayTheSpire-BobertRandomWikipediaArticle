@@ -14,6 +14,10 @@ public class WebServiceClient {
   private String responseBody;
   private static volatile boolean isDone = false;
 
+  /**
+   * read https://www.mediawiki.org/w/api.php?action=help&modules=query
+   * and  https://www.mediawiki.org/wiki/Extension:TextExtracts
+   */
   public void requestRandomWikipediaArticle() {
     makeHTTPRequest("https://en.wikipedia.org/w/api.php" +
         "?format=json&action=query" +
