@@ -45,9 +45,9 @@ public class WebServiceClient {
         status = httpResponse.getStatus().getStatusCode();
         responseBody = httpResponse.getResultAsString();
         if (status/100 != 2) {
-          logger.warn("Query failed with status code: {}", status);
-          logger.warn(responseBody);
-          logger.warn(httpResponse.toString());
+          logger.error("Query failed with status code: {}", status);
+          logger.error(responseBody);
+          logger.error(httpResponse.toString());
         }
       }
 
