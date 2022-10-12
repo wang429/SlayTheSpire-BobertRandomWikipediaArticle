@@ -4,18 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>SlayTheSpireModThing</artifactId>
+    <groupId>bobertg.wiki</groupId>
+    <artifactId>bobert-wiki-lookup-mod</artifactId>
     <version>0.0.1</version>
-    <name>BobertG's Mod Thing</name>
-    <description>Stuff and Things</description>
+    <name>BobertG's Wikipedia Lookup Mod</name>
+    <description>Various things will perform a Wikipedia lookup, for whatever reason.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <SlayTheSpire.version>11-29-2020</SlayTheSpire.version>
-        <ModTheSpire.version>3.18.0</ModTheSpire.version>
+        <SlayTheSpire.version>10-04-2022</SlayTheSpire.version>
+        <ModTheSpire.version>3.29.0</ModTheSpire.version>
 
         <!--
             You need to set a STEAMAPPS_PATH environment variable to enable Maven to find the dependencies.

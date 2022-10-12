@@ -1,12 +1,13 @@
-# SlayTheSpire-BobertModThing
+# Learn from Wikipedia
 
-Adds random mod ideas. Currently includes:
- - Updating The Library event to grab a random article from Wikipedia and present the introduction.
- Note: this could end up displaying very little for some articles
- Note: this appears to have a minor, but noticeable effect on the library's load time
- - A yet unfinished fishing event to The Beyond
+* Updates The Library event to grab a random article from Wikipedia and present the introduction.
+  * Note: this could end up displaying very little content for some articles
+  * Note: this appears to have a minor, but noticeable effect on The Library's load time
  
-Please log any bugs or suggestions in the Issues. Thank you. 
+## Ideas
+
+ * Open random article from Wikipedia after Lesson Learned
+ * Add relic for Cursed Tome Event that does _something_ related to random knowledge gain.
 
 ## How to build from source
 
