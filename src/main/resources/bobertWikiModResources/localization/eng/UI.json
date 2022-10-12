@@ -1,0 +1,13 @@
+{
+  "bobertWikiMod:ModSettingsPanel": {
+    "TEXT": [
+      "Allow the mod to send a request to the official Wikipedia API"
+    ]
+  },
+  "bobertWikiMod:RelicStats": {
+    "TEXT": [
+      " NL Per turn: ",
+      " NL Per combat: "
+    ]
+  }
+}

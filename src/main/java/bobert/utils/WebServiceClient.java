@@ -12,7 +12,6 @@ public class WebServiceClient {
 
   private int status;
   private String responseBody;
-  private static volatile boolean isDone = false;
 
   /**
    * read https://www.mediawiki.org/w/api.php?action=help&modules=query
